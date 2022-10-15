@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL](https://github.com/katrine9176/stats-preview-card-Frontendmentor)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site URL here](https://katrine9176.github.io/stats-preview-card-Frontendmentor/)
 
 
 ### Built with
