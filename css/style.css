@@ -27,12 +27,13 @@ main .card {
 main .card .img-box {
   width: 90vw;
   height: auto;
-  background-color: hsla(277deg, 64%, 43%, 0.475);
+  background-color: hsl(277deg, 64%, 61%);
 }
 main .card .img-box img {
   width: 90vw;
   height: 100%;
-  opacity: 20%;
+  mix-blend-mode: multiply;
+  opacity: 80%;
 }
 main .card .img-box .img-desktop {
   display: none;
@@ -95,8 +96,10 @@ main .attribution a {
        object-fit: cover;
   }
   main .card .img-box img {
-    width: 100%;
-    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
   }
   main .card .img-box .img-mobile {
     display: none;
