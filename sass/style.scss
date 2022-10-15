@@ -1,0 +1,162 @@
+@import 'colors';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.5rem;
+	font-family: 'Inter', sans-serif;
+	background-color: $very-dark-blue;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	.card {
+		width: 90vw;
+		background-color: $dark-desaturated-blue;
+		border-radius: 8px;
+		overflow: hidden;
+
+		.img-box {
+			width: 90vw;
+			height: auto;
+			background-color: $soft-violet-bg;
+
+			img {
+				width: 90vw;
+				height: 100%;
+				opacity: 20%;
+			}
+
+			.img-desktop {
+				display: none;
+			}
+		}
+
+		.text-box {
+			margin: 1em;
+			text-align: center;
+
+			h1 {
+				margin-top: 1em;
+				color: $white;
+				font-size: 2.7rem;
+
+				.insights {
+					color: $soft-violet;
+				}
+			}
+
+			.text {
+				margin-top: 1em;
+				color: $slightly-transparent-white-dark;
+				word-spacing: 0.1em;
+			}
+
+			.stats {
+				margin: 1em;
+
+				.stats-number {
+					color: $white;
+					font-weight: bold;
+					font-size: 2rem;
+					margin: 0.3em;
+				}
+
+				.stats-text {
+					color: $slightly-transparent-white-light;
+					text-transform: uppercase;
+					font-size: 1.2rem;
+					letter-spacing: 1px;
+				}
+			}
+		}
+	}
+
+	.attribution {
+        margin-top: 3em;
+		font-size: 1.3rem;
+		text-align: center;
+        color: $slightly-transparent-white-dark;
+        a {
+            color: hsl(228, 45%, 44%);
+            text-decoration: none;
+        }
+	}
+}
+
+@media (min-width: 768px) {
+	main {
+		.card {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-auto-rows: 1;
+
+			.img-box {
+				grid-column: 2/3;
+				grid-row: 1;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+				.img-mobile {
+					display: none;
+				}
+				.img-desktop {
+					display: block;
+				}
+			}
+
+			.text-box {
+				margin: 1em 4em;
+				h1 {
+					text-align: left;
+					font-size: 4rem;
+				}
+
+				.text {
+					text-align: left;
+					margin-top: 3em;
+					font-size: 1.7rem;
+				}
+				.stats {
+					display: flex;
+					flex-direction: row;
+					text-align: left;
+					position: end;
+					margin-top: 5em;
+
+					.stats-element {
+						margin-right: 2em;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	main {
+		.card {
+			width: 60vw;
+
+			.img-box {
+				width: 100%;
+			}
+		}
+	}
+}
